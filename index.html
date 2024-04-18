@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- Font awesome cdn link -->
+</head>
+<body>
+    <div class="main_box">
+
+        <!-- left side -->
+        <aside>
+
+            <!-- logo -->
+            <div class="top">
+            <div class="logo"><i class="fa-solid fa-cubes-stacked"></i><h1><span class="heading">logoipsum</span></h1></div>
+            </div>
+            
+            <!-- sidebar -->
+            <div class="sidebar">
+
+                    <a href="" class="active">
+                        <i class="fa-solid fa-house"></i>
+                        <h3>Home</h3>
+                    </a>
+                    <a href="">
+                        <i class="fa-solid fa-user-tie"></i>
+                        <h3>Client Mngt</h3>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-regular fa-envelope-open"></i>
+                        <h3>Job Mngt</h3>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-solid fa-users"></i>
+                        <h3>Staff Mngt</h3>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-regular fa-address-book"></i>
+                        <h3>Service Mngt</h3>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-solid fa-book-open"></i>
+                        <h3>Kanban</h3>
+                    </a>
+                    <a href="">
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                        <h3>Client Billing</h3>
+                    </a>
+                    <a href="">
+                        <i class="fa-solid fa-ticket"></i>
+                        <h3>CRM Mngt</h3>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        <h3>Report Mngt</h3>
+                    </a>
+
+            </div>
+
+        </aside>
+
+        <!-- main section -->
+        <div class="main">
+
+            <!-- navbar -->
+            <div class="navbar">
+
+                <div class="navbar-left">
+                    <i class="fa-solid fa-bars  icons"></i>
+                    <h1>Dashboard</h1>
+                </div>
+
+                <div class="navbar-right">
+                    <div class="navbar-right-one">
+                        <i class="fa-solid fa-magnifying-glass  icons"></i>
+                        <div class="ring"><i class="fa-regular fa-bell  icons"></i></div>
+                        <i class="fa-regular fa-envelope-open  icons"></i>
+                    </div>
+                    <div class="navbar-right-two">
+                        <h2>Saurab</h2>
+                        <img src="./img/img1.jpg" alt="">
+                        <i class="fa-solid fa-circle-plus"></i>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- insights -->
+            <div class="insights">
+
+                <!-- insights left side -->
+                <div class="insights-left">
+
+                    <!-- revenue & onboarding -->
+                    <div class="rev-on">
+
+                        <div class="revenue">
+                            <h3>Revenue</h3>
+
+                            <div class="revenue-items">
+                                <div class="year">
+                                    <small>THIS YEAR</small>
+                                    <h1 style="font-size: 18px;">$283,190</h1>
+                                    <span class="profit"><i class="fa-solid fa-circle-arrow-up"></i><p style="color: rgb(23, 227, 23)">+5.23%</p></span>
+                                    <i style="color: rgb(23, 227, 23)" class="fa-solid fa-arrow-trend-up progress"></i>
+                                </div>
+                                <div class="month">
+                                    <small>THIS MONTH</small>
+                                    <h1 style="font-size: 18px;">$56,890</h1>
+                                    <span class="loss"><i class="fa-solid fa-circle-arrow-down"></i><p style="color: rgb(251, 55, 55)">-1.34%</p></span>
+                                    <i style="color: rgb(251, 55, 55)" class="fa-solid fa-arrow-trend-down progress"></i>
+                                </div>
+                            </div>                       
+                        </div>
+    
+                        <div class="onboarding">
+
+                            <h3>Onboarding Status</h3>
+
+                            <div class="onboarding-items">
+
+                                <div class="circle">
+                                    <svg>
+                                        <circle class="c-one" r="50" cy="62" cx="70"></circle>
+                                        <circle class="c-two" r="40" cy="62" cx="70"></circle>
+                                        <circle class="c-three" r="30" cy="62" cx="70"></circle>
+                                    </svg>
+                                </div>
+
+                                <div class="steps">
+
+                                    <div class="steps-list">
+                                        <div class="purple dot" style="background: purple;"></div>
+                                        <div class="step-name"><p>Invitation</p><h3>320</h3></div>
+                                    </div>
+                                        
+                                    <div class="step-list">
+                                        <div class="orange dot" style="background: orange;"></div>
+                                        <div class="step-name"><p>In-progress</p><h3>560</h3></div>
+                                    </div>
+                                        
+                                    <div class="steps-list">
+                                        <div class="cyan dot" style="background: cyan;"></div>
+                                        <div class="step-name"><p>Completed</p><h3>183</h3></div>
+                                        
+                                    </div>
+                                        
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- lead & oppurtinity -->
+                    <div class="lead">
+
+                        <div class="lead-top">
+                            <h3>Lead oppurtinity</h3>
+                            <button><h3>Last 30 Days</h3><i class="fa-solid fa-caret-down"></i></button>
+                        </div>
+
+                        <div class="lead-main">
+
+                            <div class="value">
+                                <small>Lead value</small>
+                                <h1 style="font-size: 18px;">$938,201</h1>
+                                <span class="profit"><i class="fa-solid fa-circle-arrow-up"></i><p style="color: rgb(23, 227, 23)">+5.23%</p></span>
+                            </div>
+
+                            <div class="graph">
+                                <i style="color: rgb(23, 227, 23)" class="fa-solid fa-arrow-trend-up progress"></i>
+                            </div>
+
+                            <div class="leads">
+                                <p>Leads</p>
+                                <h3>89</h3>
+                            </div>
+
+                            <div class="source">
+                                <p>Top Lead Source</p>
+                                <h3>Facebook</h3>
+                            </div>
+
+                        </div>  
+
+                    </div>
+
+                    <!-- Task status -->
+                    <div class="task">
+
+                        <div class="task-head">
+                            <h3>Task outstanding status</h3>
+                        </div>
+
+                        <div class="task-body">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <span class="table-row">
+                                                <th>Type</th>
+                                                <th>Date</th>
+                                                <th>Full Name</th>
+                                                <th>Status</th>
+                                                <th>Due Date</th>
+                                        </span>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <span class="table-row">
+                                            <td><span class="type">Individual Tax Return</span></td>
+                                            <td>23 Jan 2022</td>
+                                            <td>Jane Cooper</td>
+                                            <td><span class="In-progress">In-progress</span></td>
+                                            <td>28-Jan-2022</td>
+                                        </span>
+                                    </tr>
+                                    <tr>
+                                        <span class="table-row">
+                                            <td><span class="type">Buisness Tax Return</span></td>
+                                            <td>23 Jan 2022</td>
+                                            <td>Wade Warren</td>
+                                            <td><span class="In-progress">In-progress</span></td>
+                                            <td>28-Jan-2022</td>
+                                        </span>
+                                    </tr>
+                                    <tr>
+                                        <span class="table-row">
+                                            <td><span class="type">Book Keeping</span></td>
+                                            <td>23 Jan 2022</td>
+                                            <td>Cameroon Williamson</td>
+                                            <td><span class="In-progress">In-progress</span></td>
+                                            <td>28-Jan-2022</td>
+                                        </span>
+                                    </tr>
+                                    <tr>
+                                        <span class="table-row">
+                                            <td><span class="type">Individual Tax Return</span></td>
+                                            <td>23 Jan 2022</td>
+                                            <td>Brooklyn Simmons</td>
+                                            <td><span class="In-progress">In-progress</span></td>
+                                            <td>28-Jan-2022</td>
+                                        </span>
+                                    </tr>
+                                    <tr>
+                                        <span class="table-row">
+                                            <td><span class="type">Buisness Tax Return</span></td>
+                                            <td>23 Jan 2022</td>
+                                            <td>Jenny Wilson</td>
+                                            <td><span class="In-progress">In-progress</span></td>
+                                            <td>28-Jan-2022</td>
+                                        </span>
+                                    </tr>
+                                    <tr>
+                                        <span class="table-row">
+                                            <td><span class="type">Individual Tax Return</span></td>
+                                            <td>23 Jan 2022</td>
+                                            <td>Robert Fox</td>
+                                            <td><span class="In-progress">In-progress</span></td>
+                                            <td>28-Jan-2022</td>
+                                        </span>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- insights right side -->
+                <div class="insights-right">
+
+                    <div class="date">
+                        <h2>Jan 2022</h2>
+                        <div class="arrow">
+                            <div class="angle"><i class="fa-solid fa-angle-left"></i></div>
+                            <div class="angle"><i class="fa-solid fa-angle-right"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="calendar">
+                        <div class="c-head">
+                            <p style="border-bottom: 2px solid #4857e2; font-weight: 700;">Month</p>
+                            <p>Week</p>
+                            <p>Day</p>
+                        </div>
+                        <div class="c-body">
+                            <table class="c-tab">
+                                <tr>
+                                    <th class="c-tab">S</th>
+                                    <th class="c-tab">M</th>
+                                    <th class="c-tab">T</th>
+                                    <th class="c-tab">W</th>
+                                    <th class="c-tab">T</th>
+                                    <th class="c-tab">F</th>
+                                    <th class="c-tab">S</th>
+                                </tr>
+                                <tr>
+                                    <td class="c-tab"></td>
+                                    <td class="c-tab" style="font-weight: 200;">1</td>
+                                    <td class="c-tab" style="font-weight: 200;">2</td>
+                                    <td class="c-tab" style="font-weight: 200;">3</td>
+                                    <td class="c-tab" style="font-weight: 200;">4</td>
+                                    <td class="c-tab" style="font-weight: 200;">5</td>
+                                    <td class="c-tab" style="font-weight: 200;">6</td>
+                                </tr>
+                                <tr>
+                                    <td class="c-tab" style="font-weight: 200;">7</td>
+                                    <td class="c-tab" style="font-weight: 200;">8</td>
+                                    <td class="c-tab"><span class="nine">9</span></td>
+                                    <td class="c-tab">10</td>
+                                    <td class="c-tab">11</td>
+                                    <td class="c-tab">12</td>
+                                    <td class="c-tab">13</td>
+                                </tr>
+                                <tr>
+                                    <td class="c-tab">14</td>
+                                    <td class="c-tab">15</td>
+                                    <td class="c-tab">16</td>
+                                    <td class="c-tab">17</td>
+                                    <td class="c-tab">18</td>
+                                    <td class="c-tab">19</td>
+                                    <td class="c-tab">20</td>
+                                </tr>
+                                <tr>
+                                    <td class="c-tab">21</td>
+                                    <td class="c-tab">22</td>
+                                    <td class="c-tab">23</td>
+                                    <td class="c-tab">24</td>
+                                    <td class="c-tab">25</td>
+                                    <td class="c-tab">26</td>
+                                    <td class="c-tab">27</td>
+                                </tr>
+                                <tr>
+                                    <td class="c-tab">28</td>
+                                    <td class="c-tab">29</td>
+                                    <td class="c-tab">30</td>
+                                    <td class="c-tab">31</td>
+                                    <td class="c-tab"></td>
+                                    <td class="c-tab"></td>
+                                    <td class="c-tab"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="events">
+                        <h3>Events</h3>
+                        <div class="team">
+                            <img class="events-img" src="./img/img2.jpg" alt="">
+                            <div class="team-desc">
+                                <h5 class="team-title">Team Meeting</h5>
+                                <p class="team-date">9 Jan 2022   |   11:00 - 11:30 AM</p>
+                            </div>
+                        </div>
+
+                        <div class="zoom">
+                            <img class="events-img" src="./img/img3.jpg" alt="">
+                            <div class="zoom-desc">
+                                <h5 class="zoom-title">Zoom call with John</h5>
+                                <p class="zoom-date">9 Jan 2022   |   1:00 - 2:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            
+        </div>
+
+    </div>
+</body>
+</html>
