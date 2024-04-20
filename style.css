@@ -1,3 +1,4 @@
+/* importing google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;1,100&display=swap');
 
 *{
@@ -9,21 +10,20 @@
     appearance: none;
 }
 body{
-    background: #f6f6f9;
-    width: 100vw;
-    height: 100vh;
+    background: #e6f2ff;
     font-size: 0.88rem;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     font-family: 'Poppins', sans-serif;
     user-select: none;
 }
 
 /* main box */
-.main_box{
-    background: white;
+.main-box{
+    background: #fff;
     display: grid;
-    grid-template-columns: 14rem auto;
-    width: 96%;
+    grid-template-columns: 12rem auto;
+    width: 97%;
+    height: 150vh;
     gap: 1rem;
     margin: 2rem 1.5rem 2rem;
     border-radius: 2rem;
@@ -36,7 +36,7 @@ aside{
 aside .top{
     background: #fff;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     margin-top: 2.5rem;
 }
@@ -44,13 +44,16 @@ aside .logo{
     display: flex;
     justify-content: center;
     align-items:center;
+    padding-left: 1rem;
     gap: 1rem;
 }
-aside .logo i{
-    color: #469fff;
+.logo i{
+    color: #3e9bff;
     font-size: 1.7rem;
     cursor: pointer;
 }
+
+/* sidebar */
 aside .sidebar{
     background-color: #fff;
     display: flex;
@@ -62,6 +65,7 @@ aside .sidebar{
 }
 aside .sidebar a{
     display: flex;
+    justify-content: space-between;
     align-items: center;
     color: #7d8da1;
     margin-left: 2rem;
@@ -70,56 +74,58 @@ aside .sidebar a{
     height: 2.5rem;
     transition: all .1s ease-in;
 }
-aside .sidebar a :nth-child(3){
-    margin-right: 1rem;
+aside .sidebar .options{
+    display: flex;
+    gap: 1rem;
 }
-aside .sidebar a.active{
+.sidebar a.active{
     color: #fff;
     background: #7380ec;
-    padding: 1rem;
+    padding: .8rem;
     border-radius: 10px;
 }
-aside .sidebar a:hover{
-    margin-left: 1.5rem;
-}
-aside .sidebar h3{
-    font-weight: 500;
-}
-.sidebar a{
-    color: #363949;
+.sidebar .options:hover{
+    transform: translateX(15px);
+    transition: all .1s ease;
 }
 
 /* main section */
 .main{
     display: flex;
     flex-direction: column;
-    background: aliceblue;
+    background: rgb(254, 247, 255);
     border-top-right-radius: 2rem;
     border-bottom-right-radius: 2rem;
 }
 
-/* main-navbar */
+/* navbar */
 .navbar{
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 66rem;
     height: 10vh;
     align-items: center;
     margin-top: 2rem;
+    margin-bottom: 1rem;
 }
+
+/* navbar left */
 .navbar-left{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
     margin-left: 1.5rem;
 }
+
+/* navbar right */
 .navbar-right{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10rem;
+    gap: 3rem;
 }
+
 .navbar-right-one{
     display: flex;
     align-items: center;
@@ -134,14 +140,12 @@ aside .sidebar h3{
     width: 2rem;
     height: 2rem;
 }
+
 .navbar-right-two{
     display: flex;
     align-items: center;
     gap: 1rem;
     margin-right: 1.5rem;
-}
-.navbar-right-two h2{
-    font-weight: 500;
 }
 .navbar-right-two img{
     width: 1.6rem;
@@ -156,7 +160,7 @@ aside .sidebar h3{
 }
 .icons{
     font-size: 1.1rem;
-    color: #363949;
+    color: #757b84;
     cursor: pointer;
 }
 .icons:hover{
@@ -166,39 +170,47 @@ aside .sidebar h3{
 /* insights */
 .insights{
     display: flex;
-    gap: 2rem;
 }
+
 .insights-left{
     display: flex;
     flex-direction: column;
     flex: 1;
     gap: 1rem;
 }
+
+/* revenue & onboarding */
 .insights-left .rev-on{
     display: flex;
     flex-direction: row;
+    width: 45rem;
 }
+
+/* revenue */
 .insights-left .revenue{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 17rem;
-    height: 12rem;
+    width: 22rem;
+    height: 14rem;
     margin-left: 1rem;
-    padding: 1rem;
+    padding: 1.5rem;
     background: #fff;
     border-radius: 1rem;
     box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
 }
 .revenue-items{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-direction: row;
     gap: 2rem;
 }
 .revenue-items .year{
-    margin-top: 2rem;
-    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    gap: 6px;
+    padding-left: 1.5rem;
 }
 .profit{
     display: flex;
@@ -206,12 +218,15 @@ aside .sidebar h3{
     justify-content: space-between;
     color: rgb(23, 227, 23);
 }
-.revenue-items .month{
-    margin-top: 2rem;
-    gap: 1rem;
-}
 .progress{
     font-size: 3rem;
+}
+.revenue-items .month{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    gap: 6px;
+    padding-right: 1.5rem;
 }
 .loss{
     display: flex;
@@ -224,8 +239,8 @@ aside .sidebar h3{
 .insights-left .onboarding{
     display: flex;
     flex-direction: column;
-    width: 17rem;
-    height: 12rem;
+    width: 22rem;
+    height: 14rem;
     margin-left: 1rem;
     padding: 1rem;
     background: #fff;
@@ -236,11 +251,12 @@ aside .sidebar h3{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    height: 10rem;
 }
 
 /* circle */
  .onboarding-items .circle{
-    position: relative;
     height: 68px;
     width: 68px;
     border-radius: 50px;
@@ -249,7 +265,7 @@ aside .sidebar h3{
     position: absolute;
     height: 150px;
     width: 150px;
-    top: 0;
+    top: 2rem;
 }
 .onboarding-items svg circle{
     fill: none;
@@ -257,19 +273,27 @@ aside .sidebar h3{
     stroke-width: 3px;
 }
 .onboarding-items svg .c-one{
-    stroke: #7380ec;
+    stroke: rgb(87, 92, 255);
     stroke-dashoffset: 0;
     stroke-dasharray: 271.24
 }
 .onboarding-items svg .c-two{
-    stroke: #ecb373;
+    stroke: orange;
     stroke-dashoffset: 0;
     stroke-dasharray: 138.88;
 }
 .onboarding-items svg .c-three{
-    stroke: #73deec;
+    stroke: cyan;
     stroke-dashoffset: 0;
     stroke-dasharray: 166.52;
+}
+.onboarding-items .steps{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 2rem;
+    right: 2.5rem;
+    gap: .5rem;
 }
  .onboarding-items .steps .dot{
     height: 5px;
@@ -278,6 +302,7 @@ aside .sidebar h3{
 }
 .onboarding-items .steps .steps-list{
     display: flex;
+    align-items: baseline;
     gap: 8px;
 }
 .onboarding-items .steps .step-name{
@@ -290,10 +315,10 @@ aside .sidebar h3{
     display: flex;
     flex-direction: column;
     background: #fff;
-    width: 100%;
-    height: 25vh;
+    width: 44rem;
+    height: 30vh;
     margin-left: 1rem;
-    padding: 1rem;
+    padding: 1.5rem;
     border-radius: 1rem;
     box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
 }
@@ -301,9 +326,9 @@ aside .sidebar h3{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 18rem;
+    width: 40rem;
 }
-.insights-left .lead-top button{
+.lead-top button{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -317,23 +342,25 @@ aside .sidebar h3{
     text-decoration: none;
     appearance: none;
 }
-.insights-left .lead-main{
+.lead-main{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 1.5rem;
+    width: 35rem;
 }
-.insights-left .lead .value{
+.lead .value{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 6px;
 }
 
 /* Task */
 .insights-left .task{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 44rem;
     height: 55vh;
     background-color: #fff;
     margin-left: 1rem;
@@ -342,27 +369,29 @@ aside .sidebar h3{
     gap: 1rem;
     box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
 }
-.insights-left .task .task-body{
+.task .task-body{
     display: flex;
     flex-direction: column;
     color: #363949;
 }
-.insights-left .task .task-body tr{
+.task .task-body tr{
     height: 2.2rem;
     border-bottom: 2px solid black;
 }
-.insights-left .task .task-body th{
+.task .task-body .t-head{
     font-size: 0.7rem;
     font-weight: 500;
+    border-bottom: 2px solid #a9a9a9;
 }
-.insights-left .task .task-body td{
+.task .task-body td{
     font-size: 0.65rem;
     font-weight: 400;
+    border-bottom: 2px solid #e0e0e0;
 }
-.insights-left .task .task-body .type{
+.task .task-body .type{
     color: #2ea4ff;
 }
-.insights-left .task .task-body .In-progress{
+.task-body .In-progress{
     display: flex;
     justify-content: center;
     color: orange;
@@ -376,23 +405,26 @@ aside .sidebar h3{
 .insights-right{
     display: flex;
     flex-direction: column;
-    width: 23vw;
+    width: 20rem;
     height: 75vh;
     background: #fff;
     border-radius: 1rem;
+    margin-right: 1rem;
     padding: 1.5rem;
     gap: 2rem;
     box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
 }
+
+/* Month */
 .insights-right .date{
     display: flex;
     justify-content: space-between;
 }
-.insights-right .date .arrow{
+.date .arrow{
     display: flex;
     gap: 1rem;
 }
-.insights-right .date .angle{
+.date .angle{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -402,37 +434,39 @@ aside .sidebar h3{
     border-radius: 2rem;
     cursor: pointer;
 }
+
+/* calendar body */
 .insights-right .calendar{
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
-.insights-right .calendar .c-head{
+ .calendar .c-head{
     display: flex;
     gap: 1rem;
 }
-.insights-right .calendar .c-head p:hover{
+.calendar .c-head p:hover{
     font-weight: 600;
     cursor: pointer;
 }
-.insights-right .calendar .c-body .c-tab{
+.c-body .c-tab{
     width: 100%;
     table-layout: fixed;
     text-align: center;
     font-size: 10px;
     border-collapse: collapse;
 }
-.insights-right .calendar .c-body tr{
+.c-body tr{
     height: 1.7rem;
 }
-.insights-right .calendar .c-body td{
+.c-body td{
     font-weight: 400;
     cursor: pointer;
 }
-.insights-right .calendar .c-body td:hover{
+.c-body td:hover{
     scale: 1.2;
 }
-.insights-right .calendar .c-body .nine{
+.c-body .nine{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -443,12 +477,79 @@ aside .sidebar h3{
     margin-left: 6px;
     border-radius: 30%;
 }
+
+/* MEDIA QUERY TAB VIEW */
+@media screen and (max-width:1024px) {
+    /* left side */
+    .main-box{
+        width: 94%;
+        height: 230vh;
+        grid-template-columns: 7rem auto;
+    }
+    .top h2{
+        display: none;
+    }
+    aside .sidebar h3{
+        display: none;
+    }
+    .sidebar .active{
+        position: relative;
+        right: 1rem;
+    }
+    .sidebar .options:hover{
+        transform: none;
+    }
+
+    /* main section */
+    .navbar{
+        width: 52rem;
+    }
+    .insights{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .insights-right{
+        margin-bottom: 1rem;
+        width: 22rem;
+    }
+}
+
+/* MEDIA QUERY PHONE VIEW */
+@media screen and (max-width:450px) {
+    .main-box{
+        width: 94%;
+        height: 230vh;
+        grid-template-columns: 3rem auto;
+    }
+    .navbar{
+        width: 22rem;
+    }
+    .navbar h1, .navbar-right h2{
+        display: none;
+    }
+    .insights{
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+    .rev-on{
+        position: relative;
+        right: 3rem;
+        transform: scale(0.8);
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .insights-right{
+        transform: scale(0.8);
+    }
+}
+
+/* events */
 .insights-right .events{
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
-.insights-right .events .team, .zoom{
+.events .team, .zoom{
     display: flex;
     gap: 1rem;
     align-items: center;
@@ -459,21 +560,13 @@ aside .sidebar h3{
     border-radius: 50%;
 }
 
-.profile-photo{
-    width: 2.8rem;
-    height: 2rem;
-    border-radius: 50%;
-    overflow: hidden;
-}
-.text-muted{
-    color: #7d8da1;
-}
 h1{
     font-weight: 700;
     font-size: 1.5rem;
 }
 h2{
-    font-size: 0.87rem;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 h3{
     font-size: 0.8rem;
@@ -492,7 +585,4 @@ small{
 p{ 
     font-size: 0.7rem;
     color: #767483;
-}
-b{
-    color: #363949;
 }
