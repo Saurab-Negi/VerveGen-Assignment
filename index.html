@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Management Dashboard</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- Font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <!-- Font awesome cdn link -->
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script> 
+    <!-- Apex charts cdn -->
 </head>
 <body>
     <div class="main-box">
@@ -129,42 +133,64 @@
                                 </div>
                             </div>                       
                         </div>
-    
+                         
                         <div class="onboarding">
 
                             <h3>Onboarding Status</h3>
-
                             <div class="onboarding-items">
+                                
+                            <div class="circle">
 
-                                <div class="circle">
-                                    <svg>
-                                        <circle class="c-one" r="50" cy="62" cx="70"></circle>
-                                        <circle class="c-two" r="40" cy="62" cx="70"></circle>
-                                        <circle class="c-three" r="30" cy="62" cx="70"></circle>
-                                    </svg>
-                                </div>
-
-                                <div class="steps">
-
-                                    <div class="steps-list">
-                                        <div class="purple dot" style="background: rgb(87, 92, 255);"></div>
-                                        <div class="step-name"><p>Invitation</p><h3>320</h3></div>
-                                    </div>
-                                        
-                                    <div class="steps-list">
-                                        <div class="orange dot" style="background: orange;"></div>
-                                        <div class="step-name"><p>In-progress</p><h3>560</h3></div>
-                                    </div>
-                                        
-                                    <div class="steps-list">
-                                        <div class="cyan dot" style="background: cyan;"></div>
-                                        <div class="step-name"><p>Completed</p><h3>183</h3></div>                                        
-                                    </div>
-                                        
-                                </div>
-
+                                <!-- Circular progress bar using Apex Charts -->
+                                <div id="chart"></div>
+                                <script>
+                                    var options = {
+                                    series: [82, 65, 80],
+                                    chart: {
+                                    height: 180,
+                                    type: 'radialBar',
+                                    },
+                                    plotOptions: {
+                                    radialBar: {
+                                        dataLabels: {
+                                        name: {
+                                            fontSize: '12px',
+                                        },
+                                        value: {
+                                            fontSize: '8px',
+                                        }
+                                        }
+                                    }
+                                    },
+                                    labels: ['Invitation', 'Completed', 'In-progress'],
+                                    };
+                            
+                                    var chart = new ApexCharts(document.querySelector("#chart"), options);
+                                    chart.render();
+                                </script>
                             </div>
-                        </div>
+                                                        
+                                    <div class="steps">
+
+                                        <div class="steps-list">
+                                            <div class="purple dot" style="background: rgb(87, 92, 255);"></div>
+                                            <div class="step-name"><p>Invitation</p><h3>320</h3></div>
+                                        </div>
+                                            
+                                        <div class="steps-list">
+                                            <div class="orange dot" style="background: orange;"></div>
+                                            <div class="step-name"><p>In-progress</p><h3>560</h3></div>
+                                        </div>
+                                            
+                                        <div class="steps-list">
+                                            <div class="cyan dot" style="background: cyan;"></div>
+                                            <div class="step-name"><p>Completed</p><h3>183</h3></div>                                        
+                                        </div>
+                                            
+                                    </div>
+
+                                </div>
+                        </div>                      
 
                     </div>
 
@@ -297,11 +323,13 @@
                     </div>
 
                     <div class="calendar">
+
                         <div class="c-head">
                             <p style="border-bottom: 2px solid #4857e2; font-weight: 700;">Month</p>
                             <p>Week</p>
                             <p>Day</p>
                         </div>
+
                         <div class="c-body">
                             <table class="c-tab">
                                 <tr>
@@ -360,23 +388,24 @@
                                 </tr>
                             </table>
                         </div>
+
                     </div>
 
                     <div class="events">
                         <h3>Events</h3>
                         <div class="team">
                             <img class="events-img" src="./img/img2.jpg" alt="">
-                            <div class="team-desc">
-                                <h5 class="team-title">Team Meeting</h5>
-                                <p class="team-date">9 Jan 2022   |   11:00 - 11:30 AM</p>
+                            <div class="t-desc">
+                                <h5 class="t-title">Team Meeting</h5>
+                                <p class="t-date">9 Jan 2022   |   11:00 - 11:30 AM</p>
                             </div>
                         </div>
 
                         <div class="zoom">
                             <img class="events-img" src="./img/img3.jpg" alt="">
-                            <div class="zoom-desc">
-                                <h5 class="zoom-title">Zoom call with John</h5>
-                                <p class="zoom-date">9 Jan 2022   |   1:00 - 2:00 PM</p>
+                            <div class="z-desc">
+                                <h5 class="z-title">Zoom call with John</h5>
+                                <p class="z-date">9 Jan 2022   |   1:00 - 2:00 PM</p>
                             </div>
                         </div>
                     </div>
@@ -387,6 +416,6 @@
             
         </div>
 
-    </div>
+    </div>     
 </body>
 </html>

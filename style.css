@@ -12,7 +12,6 @@
 body{
     background: #e6f2ff;
     font-size: 0.88rem;
-    /* overflow-x: hidden; */
     font-family: 'Poppins', sans-serif;
     user-select: none;
 }
@@ -23,7 +22,7 @@ body{
     display: grid;
     grid-template-columns: 12rem auto;
     width: 97%;
-    height: 150vh;
+    height: 58rem;
     gap: 1rem;
     margin: 2rem 1.5rem 2rem;
     border-radius: 2rem;
@@ -31,20 +30,17 @@ body{
 
 /* left side */
 aside{
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 aside .top{
-    background: #fff;
     display: flex;
-    justify-content: center;
-    align-items: center;
     margin-top: 2.5rem;
+    margin-left: 2.5rem;
+    width: 9rem;
 }
 aside .logo{
     display: flex;
-    justify-content: center;
-    align-items:center;
-    padding-left: 1rem;
     gap: 1rem;
 }
 .logo i{
@@ -55,13 +51,12 @@ aside .logo{
 
 /* sidebar */
 aside .sidebar{
-    background-color: #fff;
     display: flex;
     flex-direction: column;
-    height: 85vh;
     margin-top: 2rem;
     position: relative;
     top: 1rem;
+    gap: 6px;
 }
 aside .sidebar a{
     display: flex;
@@ -85,7 +80,7 @@ aside .sidebar .options{
     border-radius: 10px;
 }
 .sidebar .options:hover{
-    transform: translateX(15px);
+    transform: translateX(12px);
     transition: all .1s ease;
 }
 
@@ -102,8 +97,8 @@ aside .sidebar .options{
 .navbar{
     display: flex;
     justify-content: space-between;
-    width: 66rem;
-    height: 10vh;
+    width: 65rem;
+    height: 3rem;
     align-items: center;
     margin-top: 2rem;
     margin-bottom: 1rem;
@@ -175,15 +170,16 @@ aside .sidebar .options{
 .insights-left{
     display: flex;
     flex-direction: column;
-    flex: 1;
     gap: 1rem;
+    margin: 1rem;
 }
 
 /* revenue & onboarding */
 .insights-left .rev-on{
     display: flex;
     flex-direction: row;
-    width: 45rem;
+    width: 43rem;
+    gap: 1rem;
 }
 
 /* revenue */
@@ -193,7 +189,6 @@ aside .sidebar .options{
     justify-content: space-between;
     width: 22rem;
     height: 14rem;
-    margin-left: 1rem;
     padding: 1.5rem;
     background: #fff;
     border-radius: 1rem;
@@ -241,7 +236,6 @@ aside .sidebar .options{
     flex-direction: column;
     width: 22rem;
     height: 14rem;
-    margin-left: 1rem;
     padding: 1rem;
     background: #fff;
     border-radius: 1rem;
@@ -255,38 +249,12 @@ aside .sidebar .options{
     height: 10rem;
 }
 
-/* circle */
- .onboarding-items .circle{
-    height: 68px;
-    width: 68px;
-    border-radius: 50px;
+/* circles using APEX charts */
+.onboarding-items .circle{
+    margin-top: 2.5rem;
+    width: 8rem;
 }
-.onboarding-items svg{
-    position: absolute;
-    height: 150px;
-    width: 150px;
-    top: 2rem;
-}
-.onboarding-items svg circle{
-    fill: none;
-    transform: rotate(270,80,80);
-    stroke-width: 3px;
-}
-.onboarding-items svg .c-one{
-    stroke: rgb(87, 92, 255);
-    stroke-dashoffset: 0;
-    stroke-dasharray: 271.24
-}
-.onboarding-items svg .c-two{
-    stroke: orange;
-    stroke-dashoffset: 0;
-    stroke-dasharray: 138.88;
-}
-.onboarding-items svg .c-three{
-    stroke: cyan;
-    stroke-dashoffset: 0;
-    stroke-dasharray: 166.52;
-}
+
 .onboarding-items .steps{
     position: absolute;
     display: flex;
@@ -295,17 +263,17 @@ aside .sidebar .options{
     right: 2.5rem;
     gap: .5rem;
 }
- .onboarding-items .steps .dot{
+.steps .dot{
     height: 5px;
     width: 5px;
     border-radius: 50%;
 }
-.onboarding-items .steps .steps-list{
+.steps .steps-list{
     display: flex;
     align-items: baseline;
     gap: 8px;
 }
-.onboarding-items .steps .step-name{
+.steps .step-name{
     display: flex;
     flex-direction: column;
 }
@@ -315,9 +283,6 @@ aside .sidebar .options{
     display: flex;
     flex-direction: column;
     background: #fff;
-    width: 44rem;
-    height: 30vh;
-    margin-left: 1rem;
     padding: 1.5rem;
     border-radius: 1rem;
     box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
@@ -326,7 +291,6 @@ aside .sidebar .options{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 40rem;
 }
 .lead-top button{
     display: flex;
@@ -347,7 +311,7 @@ aside .sidebar .options{
     justify-content: space-between;
     align-items: center;
     margin-top: 1.5rem;
-    width: 35rem;
+    width: 30rem;
 }
 .lead .value{
     display: flex;
@@ -360,10 +324,7 @@ aside .sidebar .options{
 .insights-left .task{
     display: flex;
     flex-direction: column;
-    width: 44rem;
-    height: 55vh;
     background-color: #fff;
-    margin-left: 1rem;
     border-radius: 2rem;
     padding: 1.5rem;
     gap: 1rem;
@@ -406,11 +367,11 @@ aside .sidebar .options{
     display: flex;
     flex-direction: column;
     width: 20rem;
-    height: 75vh;
+    height: 29rem;
     background: #fff;
     border-radius: 1rem;
-    margin-right: 1rem;
     padding: 1.5rem;
+    margin: 1rem;
     gap: 2rem;
     box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
 }
@@ -445,7 +406,7 @@ aside .sidebar .options{
     display: flex;
     gap: 1rem;
 }
-.calendar .c-head p:hover{
+.c-head p:hover{
     font-weight: 600;
     cursor: pointer;
 }
@@ -478,18 +439,32 @@ aside .sidebar .options{
     border-radius: 30%;
 }
 
+/* events */
+.insights-right .events{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.events .team, .zoom{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.events-img{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
 /* MEDIA QUERY TAB VIEW */
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1025px) {
     /* left side */
     .main-box{
         width: 94%;
-        height: 230vh;
+        height: 90rem;
         grid-template-columns: 7rem auto;
     }
-    .top h2{
-        display: none;
-    }
-    aside .sidebar h3{
+    .top h2, aside .sidebar h3{
         display: none;
     }
     .sidebar .active{
@@ -508,56 +483,39 @@ aside .sidebar .options{
         flex-direction: column-reverse;
         align-items: center;
     }
-    .insights-right{
-        margin-bottom: 1rem;
-        width: 22rem;
-    }
 }
 
-/* MEDIA QUERY PHONE VIEW */
-@media screen and (max-width:450px) {
-    .main-box{
-        width: 94%;
-        height: 230vh;
-        grid-template-columns: 3rem auto;
-    }
-    .navbar{
-        width: 22rem;
-    }
-    .navbar h1, .navbar-right h2{
+@media screen and (max-width:500px){
+    aside{
         display: none;
     }
-    .insights{
-        flex-direction: column-reverse;
-        align-items: flex-start;
+    .main-box{
+        overflow-x: hidden;
+        width: 100%;
+        margin: 0;
+        height: 90rem;
+        grid-template-columns: 7rem auto;
+    }
+    .navbar, .main{
+        width: 26rem;
+    }
+    .navbar h1, .navbar-right-two h2{
+        display: none;
     }
     .rev-on{
-        position: relative;
-        right: 3rem;
-        transform: scale(0.8);
+        justify-content: center;
         flex-wrap: wrap;
-        gap: 1rem;
     }
-    .insights-right{
-        transform: scale(0.8);
+    .lead{
+        position: relative;
+        left: 8.8rem;
+        width: 25rem;
     }
-}
-
-/* events */
-.insights-right .events{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-.events .team, .zoom{
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-.events-img{
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
+    .task{
+        position: relative;
+        left: 8.8rem;
+        width: 25rem;
+    }
 }
 
 h1{
