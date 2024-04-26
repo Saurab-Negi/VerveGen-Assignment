@@ -29,17 +29,17 @@ body{
 }
 
 /* left side */
-aside{
+.left{
     display: flex;
     flex-direction: column;
 }
-aside .top{
+.left .top{
     display: flex;
     margin-top: 2.5rem;
     margin-left: 2.5rem;
     width: 9rem;
 }
-aside .logo{
+.left .logo{
     display: flex;
     gap: 1rem;
 }
@@ -50,7 +50,7 @@ aside .logo{
 }
 
 /* sidebar */
-aside .sidebar{
+.left .sidebar{
     display: flex;
     flex-direction: column;
     margin-top: 2rem;
@@ -58,7 +58,7 @@ aside .sidebar{
     top: 1rem;
     gap: 6px;
 }
-aside .sidebar a{
+.left .sidebar a{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -69,7 +69,7 @@ aside .sidebar a{
     height: 2.5rem;
     transition: all .1s ease-in;
 }
-aside .sidebar .options{
+.left .sidebar .options{
     display: flex;
     gap: 1rem;
 }
@@ -313,6 +313,11 @@ aside .sidebar .options{
     margin-top: 1.5rem;
     width: 30rem;
 }
+.l-item{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
 .lead .value{
     display: flex;
     flex-direction: column;
@@ -464,7 +469,7 @@ aside .sidebar .options{
         height: 90rem;
         grid-template-columns: 7rem auto;
     }
-    .top h2, aside .sidebar h3{
+    .top h2, .left .sidebar h3{
         display: none;
     }
     .sidebar .active{
@@ -486,7 +491,7 @@ aside .sidebar .options{
 }
 
 @media screen and (max-width:500px){
-    aside{
+    .left{
         display: none;
     }
     .main-box{
@@ -508,8 +513,17 @@ aside .sidebar .options{
     }
     .lead{
         position: relative;
-        left: 8.8rem;
-        width: 25rem;
+        left: 10rem;
+        width: 23rem;
+        height: 17rem;
+    }
+    .lead-main{
+        position: absolute;
+        flex-direction: column;
+        top: 3rem;
+        left: -3rem;
+        gap: 3rem;
+        z-index: 10;
     }
     .task{
         position: relative;
